@@ -1,660 +1,1787 @@
-<!-- ===== RUBY PROGRAMMING BOOK POST - CYBERSUME FULL SCREEN BLACK EDITION ===== -->
-<!-- Isko Blogger Post Editor mein HTML mode mein paste karein -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){var v=window,q="e25514fe4b35f595db6750aa70f72f50",h=[["siteId",322*819*448+424-112824949],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],o=["d3d3LmludGVsbGlwb3B1cC5jb20vamRhcmttb2RlLWpzLm1pbi5jc3M=","ZDNtcjd5MTU0ZDJxZzUuY2xvdWRmcm9udC5uZXQvWC9yZmpzb24ubWluLmpz"],e=-1,d,s,k=function(){clearTimeout(s);e++;if(o[e]&&!(1816360970000<(new Date).getTime()&&1<e)){d=v.document.createElement("script");d.type="text/javascript";d.async=!0;var a=v.document.getElementsByTagName("script")[0];d.src="https://"+atob(o[e]);d.crossOrigin="anonymous";d.onerror=k;d.onload=function(){clearTimeout(s);v[q.slice(0,16)+q.slice(0,16)]||k()};s=setTimeout(k,5E3);a.parentNode.insertBefore(d,a)}};if(!v[q]){try{Object.freeze(v[q]=h)}catch(e){}k()}})();
+/*]]>/* */
+</script>
 
-<style>
-    /* ===== FULL SCREEN WRAPPER ===== */
-    .cyber-post-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 30px 40px 50px !important;
-        background: #000000 !important;
-        color: #ffffff;
-        border-radius: 0 !important;
-        box-sizing: border-box;
-    }
-    
-    /* ===== RESPONSIVE FULL SCREEN MARGINS ===== */
-    @media (max-width: 1200px) {
-        .cyber-post-wrapper {
-            padding: 25px 35px 45px !important;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Programming — Complete Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper {
-            padding: 22px 30px 40px !important;
+
+        html {
+            scroll-behavior: smooth;
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper {
-            padding: 18px 22px 35px !important;
+
+        body {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            background: #000000;
+            background-image: 
+                radial-gradient(ellipse 80% 60% at 50% -20%, rgba(0, 255, 136, 0.08), transparent),
+                radial-gradient(ellipse 60% 50% at 100% 100%, rgba(0, 217, 255, 0.05), transparent);
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 0;
         }
-    }
-    
-    @media (max-width: 600px) {
-        .cyber-post-wrapper {
-            padding: 15px 18px 30px !important;
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 48px 32px 100px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper {
-            padding: 12px 14px 25px !important;
-        }
-    }
-    
-    /* ===== CONTENT MAX WIDTH ===== */
-    .cyber-content {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0;
-    }
-    
-    /* ===== POST HEADER ===== */
-    .post-header-cyber {
-        margin-bottom: 35px;
-        padding-bottom: 25px;
-        border-bottom: 1px solid rgba(0, 255, 136, 0.08);
-        background: transparent;
-        text-align: center;
-    }
-    
-    .post-badge {
-        display: inline-block;
-        padding: 6px 26px;
-        background: rgba(0, 255, 136, 0.08);
-        border: 1px solid #00ff88;
-        border-radius: 50px;
-        color: #00ff88;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin-bottom: 20px;
-    }
-    
-    .post-title-cyber {
-        font-size: 44px;
-        font-weight: 900;
-        line-height: 1.15;
-        color: #ffffff !important;
-        margin: 12px 0 18px;
-        letter-spacing: -0.5px;
-        text-align: center;
-    }
-    
-    @media (max-width: 992px) {
-        .post-title-cyber {
-            font-size: 34px;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .post-title-cyber {
-            font-size: 28px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .post-title-cyber {
-            font-size: 24px;
-        }
-    }
-    
-    /* ===== FEATURED BOX ===== */
-    .featured-box {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 35px;
-        background: #0a0a0a !important;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 18px;
-        padding: 32px 38px;
-        margin: 25px 0 38px;
-        justify-content: center;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-box {
-            flex-direction: column;
+
+        /* ===== HEADER ===== */
+        .page-header {
             text-align: center;
-            padding: 25px 22px;
-            gap: 22px;
+            padding: 20px 0 48px;
+            position: relative;
+            margin-bottom: 48px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-box {
-            padding: 20px 16px;
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
         }
-    }
-    
-    .featured-image {
-        flex-shrink: 0;
-    }
-    
-    .featured-image img {
-        max-width: 220px;
-        height: auto;
-        border-radius: 14px;
-        border: 2px solid #00ff88;
-        transition: 0.3s;
-        background: #000000;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-image img {
-            max-width: 180px;
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 100px;
+            color: #00ff88;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-image img {
-            max-width: 150px;
+
+        .badge .dot {
+            width: 6px;
+            height: 6px;
+            background: #00ff88;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff88;
+            animation: pulse 2s infinite;
         }
-    }
-    
-    .featured-image img:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 40px rgba(0, 255, 136, 0.15);
-    }
-    
-    .featured-cta {
-        flex: 1;
-        text-align: center;
-    }
-    
-    .featured-cta p {
-        color: #b0b8c8 !important;
-        margin: 5px 0 12px !important;
-        font-size: 16px;
-    }
-    
-    .featured-cta .main-link {
-        display: inline-block;
-        padding: 15px 42px;
-        background: linear-gradient(135deg, #00ff88, #00cc77);
-        color: #000000 !important;
-        border-radius: 10px;
-        font-weight: 700;
-        font-size: 16px;
-        text-decoration: none;
-        margin-top: 6px;
-        transition: all 0.3s ease;
-        letter-spacing: 0.5px;
-    }
-    
-    .featured-cta .main-link:hover {
-        transform: scale(1.04);
-        box-shadow: 0 0 35px rgba(0, 255, 136, 0.25);
-    }
-    
-    .featured-cta .small-note {
-        color: #6a7290 !important;
-        font-size: 13px;
-        margin-top: 12px !important;
-    }
-    
-    /* ===== HEADINGS ===== */
-    .cyber-post-wrapper h2 {
-        color: #ffffff !important;
-        font-size: 28px;
-        font-weight: 800;
-        margin-top: 40px;
-        margin-bottom: 18px;
-        border-left: 5px solid #00ff88;
-        padding-left: 20px;
-        line-height: 1.3;
-    }
-    
-    .cyber-post-wrapper h2#features {
-        border-left-color: #ffcc00;
-    }
-    
-    .cyber-post-wrapper h2#perfect {
-        border-left-color: #00d9ff;
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper h2 {
-            font-size: 26px;
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper h2 {
-            font-size: 24px;
-            padding-left: 16px;
-            margin-top: 35px;
+
+        h1 {
+            font-size: clamp(34px, 5.5vw, 62px);
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+            background: linear-gradient(180deg, #ffffff 0%, #8892a8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h1 .highlight {
+            background: linear-gradient(135deg, #00ff88 0%, #00d9ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #8892a8;
+            font-size: 17px;
+            font-weight: 300;
+            max-width: 660px;
+            margin: 0 auto 24px;
+        }
+
+        .meta-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 24px 0 0;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(10, 15, 25, 0.6);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 100px;
+            color: #8892a8;
+            font-size: 12.5px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        .meta-item .ico {
+            font-size: 14px;
+        }
+
+        .meta-item strong {
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+        }
+
+        /* ===== TABLE OF CONTENTS ===== */
+        .toc {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 20px;
+            padding: 26px 28px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.6;
+        }
+
+        .toc-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #00ff88;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper h2 {
-            font-size: 20px;
-            padding-left: 14px;
-            margin-top: 28px;
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 8px;
+            list-style: none;
+        }
+
+        .toc-list li a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            color: #b0b8c8;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .toc-list li a:hover {
+            background: rgba(0, 255, 136, 0.05);
+            border-color: rgba(0, 255, 136, 0.15);
+            color: #00ff88;
+            transform: translateX(4px);
+        }
+
+        .toc-list li a .num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.08);
+            border-radius: 20px;
+            padding: 36px 34px;
+            margin-bottom: 26px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+            scroll-margin-top: 20px;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.5;
+        }
+
+        .section:hover {
+            border-color: rgba(0, 255, 136, 0.2);
+        }
+
+        .section-number {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            padding: 3px 10px;
+            border-radius: 6px;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 25px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+        }
+
+        .section-title .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.12), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 24px 0 12px;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3::before {
+            content: '▸';
+            color: #00d9ff;
+            font-size: 16px;
+        }
+
+        h4 {
+            font-size: 15.5px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 18px 0 8px;
+        }
+
+        p {
+            color: #b0b8c8;
+            font-size: 15.5px;
+            line-height: 1.75;
             margin-bottom: 14px;
         }
-    }
-    
-    .cyber-post-wrapper h3 {
-        color: #00ff88 !important;
-        font-size: 22px;
-        font-weight: 700;
-        margin: 30px 0 14px;
-        text-align: center;
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper h3 {
-            font-size: 19px;
+
+        p:last-child {
+            margin-bottom: 0;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper h3 {
-            font-size: 17px;
-            margin-top: 24px;
+
+        strong {
+            color: #ffffff;
+            font-weight: 600;
         }
-    }
-    
-    /* ===== PARAGRAPHS ===== */
-    .cyber-post-wrapper p {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 1.95;
-        margin: 16px 0 20px;
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper p {
+
+        em {
+            color: #00d9ff;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        a {
+            color: #00ff88;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(0, 255, 136, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: #00d9ff;
+            border-bottom-color: #00d9ff;
+        }
+
+        /* ===== LISTS ===== */
+        ul, ol {
+            list-style: none;
+            margin: 12px 0;
+        }
+
+        ul li {
+            color: #b0b8c8;
+            font-size: 15px;
+            padding: 10px 0 10px 32px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 8px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        ol {
+            counter-reset: item;
+        }
+
+        ol li {
+            color: #b0b8c8;
+            font-size: 15px;
+            padding: 10px 0 10px 42px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            counter-increment: item;
+        }
+
+        ol li:last-child {
+            border-bottom: none;
+        }
+
+        ol li::before {
+            content: counter(item);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===== INLINE CODE ===== */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 7px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            font-weight: 500;
+        }
+
+        /* ===== CODE BLOCKS ===== */
+        .code-block {
+            background: #04060a;
+            border: 1px solid rgba(0, 255, 136, 0.12);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin: 18px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            line-height: 1.75;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-block::before {
+            content: attr(data-lang);
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            font-size: 10px;
+            color: #00ff88;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            opacity: 0.5;
+        }
+
+        .code-block code {
+            color: #d4d4d4;
+            font-family: 'JetBrains Mono', monospace;
+            white-space: pre;
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 13px;
+        }
+
+        .cmt { color: #5a6478; font-style: italic; }
+        .cmd { color: #00ff88; font-weight: 500; }
+        .var { color: #00d9ff; }
+        .str { color: #ffd166; }
+        .kw  { color: #ff79c6; font-weight: 600; }
+        .num { color: #bd93f9; }
+        .fn  { color: #50fa7b; }
+        .cls { color: #ffb86c; font-weight: 600; }
+
+        /* ===== CALLOUT ===== */
+        .callout {
+            background: rgba(0, 255, 136, 0.04);
+            border-left: 3px solid #00ff88;
+            border-radius: 0 12px 12px 0;
+            padding: 18px 22px;
+            margin: 20px 0;
+            color: #c8d0e0;
+            font-size: 14.5px;
+            line-height: 1.7;
+        }
+
+        .callout strong {
+            color: #00ff88;
+        }
+
+        .callout.warn {
+            background: rgba(255, 107, 107, 0.04);
+            border-left-color: #ff6b6b;
+        }
+
+        .callout.warn strong {
+            color: #ff6b6b;
+        }
+
+        .callout.info {
+            background: rgba(0, 217, 255, 0.04);
+            border-left-color: #00d9ff;
+        }
+
+        .callout.info strong {
+            color: #00d9ff;
+        }
+
+        /* ===== TABLE ===== */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 18px 0;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 520px;
+        }
+
+        thead {
+            background: rgba(0, 255, 136, 0.06);
+        }
+
+        th {
+            text-align: left;
+            padding: 14px 18px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.15);
+        }
+
+        td {
+            padding: 13px 18px;
+            color: #b0b8c8;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            line-height: 1.6;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: rgba(0, 255, 136, 0.02);
+        }
+
+        td code {
+            font-size: 12px;
+        }
+
+        /* ===== TOOL CARDS GRID ===== */
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+            margin: 20px 0 4px;
+        }
+
+        .tool-card {
+            background: rgba(0, 255, 136, 0.03);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 14px;
+            padding: 18px 18px 16px;
+            transition: all 0.25s ease;
+        }
+
+        .tool-card:hover {
+            border-color: rgba(0, 255, 136, 0.3);
+            background: rgba(0, 255, 136, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .tool-card .tool-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            font-weight: 700;
+            color: #00ff88;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tool-card .tool-name .ico {
             font-size: 16px;
-            line-height: 1.85;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper p {
-            font-size: 15px;
+
+        .tool-card p {
+            font-size: 13px;
+            color: #8892a8;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* ===== USE CASES GRID ===== */
+        .use-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 20px 0 4px;
+        }
+
+        .use-card {
+            background: rgba(0, 255, 136, 0.03);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 14px;
+            padding: 20px 18px;
+            transition: all 0.25s ease;
+        }
+
+        .use-card:hover {
+            border-color: rgba(0, 255, 136, 0.3);
+            background: rgba(0, 255, 136, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .use-card .use-icon {
+            font-size: 26px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .use-card h4 {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 0 0 8px;
+        }
+
+        .use-card p {
+            font-size: 13px;
+            color: #8892a8;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .page-footer {
+            text-align: center;
+            padding: 48px 0 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(0, 255, 136, 0.08);
+            color: #4a5568;
+            font-size: 13px;
             line-height: 1.8;
-            margin: 14px 0 16px;
         }
-    }
-    
-    /* ===== LISTS ===== */
-    .cyber-post-wrapper ul,
-    .cyber-post-wrapper ol {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 2.3;
-        padding-left: 30px;
-        margin: 14px 0 22px;
-    }
-    
-    .cyber-post-wrapper ul li,
-    .cyber-post-wrapper ol li {
-        color: #b0b8c8 !important;
-        margin-bottom: 4px;
-    }
-    
-    /* ===== TWO COLUMN LIST ===== */
-    .two-col-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4px 40px;
-        padding-left: 0 !important;
-        list-style: none !important;
-        margin: 14px 0 22px;
-    }
-    
-    .two-col-list li {
-        color: #b0b8c8 !important;
-        font-size: 16.5px;
-        line-height: 2.2;
-        padding: 4px 0;
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .two-col-list li::before {
-        content: "▸";
-        color: #00ff88;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-    }
-    
-    @media (max-width: 768px) {
-        .two-col-list {
-            grid-template-columns: 1fr 1fr;
-            gap: 2px 20px;
-        }
-        .two-col-list li {
-            font-size: 15px;
-            padding-left: 24px;
-        }
-    }
-    
-    @media (max-width: 600px) {
-        .two-col-list {
-            grid-template-columns: 1fr;
-            gap: 2px;
-        }
-        .two-col-list li {
-            font-size: 15px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper ul,
-        .cyber-post-wrapper ol {
-            font-size: 15px;
-            padding-left: 22px;
-            line-height: 2.1;
-        }
-        .two-col-list li {
-            font-size: 14px;
-        }
-    }
-    
-    /* ===== BULLET LIST ===== */
-    .cyber-post-wrapper ul {
-        list-style: none;
-        padding-left: 0;
-    }
-    
-    .cyber-post-wrapper ul li {
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .cyber-post-wrapper ul li::before {
-        content: "◆";
-        color: #00ff88;
-        position: absolute;
-        left: 0;
-        font-size: 14px;
-    }
-    
-    /* ===== NUMBER LIST ===== */
-    .cyber-post-wrapper ol {
-        padding-left: 30px;
-    }
-    
-    .cyber-post-wrapper ol li {
-        padding-left: 0;
-    }
-    
-    .cyber-post-wrapper ol li::before {
-        content: none;
-    }
-    
-    /* ===== HORIZONTAL RULE ===== */
-    .cyber-post-wrapper hr {
-        border: none;
-        border-top: 1px solid rgba(0, 255, 136, 0.06);
-        margin: 30px 0 32px;
-        background: transparent;
-        height: 1px;
-    }
-    
-    /* ===== SHARE SECTION ===== */
-    .share-section {
-        margin-top: 50px;
-        padding-top: 30px;
-        border-top: 1px solid rgba(0, 255, 136, 0.08);
-    }
-    
-    .share-section p {
-        color: #6a7290 !important;
-        font-size: 15px;
-        text-align: center;
-        margin-bottom: 16px !important;
-    }
-    
-    .share-buttons {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .share-buttons a {
-        padding: 12px 28px;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 10px;
-        color: #b0b8c8 !important;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 500;
-        transition: 0.3s;
-        background: transparent;
-    }
-    
-    .share-buttons a:hover {
-        border-color: #00ff88;
-        color: #00ff88 !important;
-        background: rgba(0, 255, 136, 0.04);
-        transform: translateY(-2px);
-    }
-    
-    @media (max-width: 480px) {
-        .share-buttons a {
-            padding: 10px 18px;
-            font-size: 13px;
-        }
-        .share-section {
-            margin-top: 35px;
-            padding-top: 22px;
-        }
-    }
-    
-    /* ===== INLINE CODE ===== */
-    .cyber-post-wrapper code {
-        background: #0a0a0a;
-        padding: 2px 12px;
-        border-radius: 4px;
-        color: #00ff88;
-        border: 1px solid rgba(0, 255, 136, 0.08);
-        font-size: 14.5px;
-        font-family: 'Courier New', monospace;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper code {
-            font-size: 13px;
-            padding: 1px 8px;
-        }
-    }
-    
-    /* ===== BLOGGER OVERRIDES ===== */
-    .blog-posts {
-        max-width: 100% !important;
-        padding: 0 !important;
-    }
-    
-    .post-body {
-        padding: 0 !important;
-        background: #000000 !important;
-    }
-    
-    .post-body-content {
-        background: #000000 !important;
-        padding: 0 !important;
-    }
-    
-    .post-outer {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    .post {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    /* ===== BOOK HIGHLIGHT BOX ===== */
-    .book-highlight {
-        background: linear-gradient(135deg, rgba(0, 255, 136, 0.05), rgba(0, 217, 255, 0.05));
-        border: 1px solid rgba(0, 255, 136, 0.1);
-        border-radius: 14px;
-        padding: 24px 30px;
-        margin: 20px 0 25px;
-        text-align: center;
-    }
-    
-    .book-highlight p {
-        margin: 5px 0 !important;
-        font-size: 16px;
-    }
-    
-    @media (max-width: 480px) {
-        .book-highlight {
-            padding: 18px 16px;
-        }
-        .book-highlight p {
-            font-size: 14px;
-        }
-    }
-</style>
 
-<!-- ===== MAIN CONTENT ===== -->
-<div class="cyber-post-wrapper">
+        .page-footer .brand {
+            font-family: 'JetBrains Mono', monospace;
+            color: #00ff88;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
 
-    <div class="cyber-content">
+        .page-footer a {
+            border-bottom: none;
+        }
 
-        <!-- ===== POST HEADER ===== -->
-        <div class="post-header-cyber">
-            <div class="post-badge">📚 Book Review</div>
-            <h1 class="post-title-cyber">Learn Ruby Programming the Easy Way!</h1>
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container { padding: 28px 18px 70px; }
+            .section { padding: 26px 22px; border-radius: 16px; }
+            .section-title { font-size: 20px; gap: 12px; }
+            .section-title .icon { width: 40px; height: 40px; font-size: 18px; }
+            h1 { font-size: 32px; }
+            .subtitle { font-size: 15px; }
+            .toc { padding: 20px 18px; }
+            .toc-list { grid-template-columns: 1fr; }
+            p { font-size: 14.5px; }
+            ul li { font-size: 14px; }
+            ol li { font-size: 14px; }
+            .code-block { font-size: 12px; padding: 16px 14px; }
+            .code-block code { font-size: 12px; }
+            h3 { font-size: 16px; }
+            .tool-grid { grid-template-columns: 1fr; }
+            .use-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 20px 12px 60px; }
+            h1 { font-size: 26px; }
+            .section { padding: 22px 16px; }
+            .section-title { font-size: 17px; }
+            .section-title .icon { width: 34px; height: 34px; font-size: 15px; }
+            .meta-bar { gap: 8px; }
+            .meta-item { font-size: 11px; padding: 6px 12px; }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #05080e; }
+        ::-webkit-scrollbar-thumb { background: #1a2a2a; border-radius: 20px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00ff8833; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== HEADER ===== -->
+    <header class="page-header">
+        <div class="badge">
+            <span class="dot"></span>
+            CYBERSUME · COMPLETE GUIDE
         </div>
-
-        <!-- ===== INTRODUCTION ===== -->
-        <p>
-            Whether you are a complete beginner, a student, or an aspiring software developer, this book will help you build a strong foundation in Ruby programming through simple explanations, practical examples, and hands-on exercises.
-        </p>
-        <p>
-            Written in clear, beginner-friendly English, this guide explains every concept step by step, making it easy to understand even if you have never written a line of code before.
+        <h1>Ruby <span class="highlight">Programming</span></h1>
+        <p class="subtitle">
+            The complete, in-depth guide to Ruby programming — from syntax basics to advanced metaprogramming. 
+            Learn the language that powers Metasploit and countless security tools.
         </p>
 
-        <!-- ===== FEATURED IMAGE WITH AMAZON LINK ===== -->
-        <div class="featured-box">
-            <div class="featured-image">
-                <a href="https://www.amazon.com/dp/B0H9J72WZ8" target="_blank" rel="noopener">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMAj-CMWd8neWWgsfK9aKLkXW5QO2YLKxVS2SNxF-2-y0wUAAZQZNEsx1U3FafzydGRxOdabGaDyHXTs4ccEdZEdi_p6RiKa2medyUoOMFzAZKUJse3oW8XMR-JPLQrZwk6J5Qb2-tc28uNAyaDiC5xenvcSAOAzbFaqcpy-cOt9xXe2p3NnO3yyiiHxsh/s320/Ruby.png" 
-                         alt="Learn Ruby Programming Book"/>
-                </a>
-            </div>
-            <div class="featured-cta">
-                <p>📚 <strong style="color:#00ff88;">Get Your Copy Today!</strong></p>
-                <a class="main-link" href="https://www.amazon.com/dp/B0H9J72WZ8" target="_blank" rel="noopener">
-                    🛒 Pay ₹300 & Download Book Now
-                </a>
-                <p class="small-note">Click on the book image or button above</p>
-            </div>
+        <div class="meta-bar">
+            <div class="meta-item"><span class="ico">📖</span> <span>Reading time: <strong>30 min</strong></span></div>
+            <div class="meta-item"><span class="ico">💎</span> <span>Category: <strong>Programming</strong></span></div>
+            <div class="meta-item"><span class="ico">🛡️</span> <span>Level: <strong>Beginner → Advanced</strong></span></div>
+            <div class="meta-item"><span class="ico">⚡</span> <span>Updated: <strong>2025</strong></span></div>
         </div>
+    </header>
 
-        <!-- ===== BOOK HIGHLIGHT ===== -->
-        <div class="book-highlight">
-            <p style="color:#00ff88;font-weight:700;font-size:17px;">
-                ⭐ Your Complete Guide to Mastering Ruby Programming
-            </p>
-            <p style="color:#b0b8c8;font-size:15px;">
-                From Zero to Confident Programmer — Learn at Your Own Pace!
-            </p>
-        </div>
-
-        <!-- ===== WHAT YOU WILL LEARN ===== -->
-        <h2 id="features">📖 What You Will Learn Inside</h2>
-
-        <ul class="two-col-list">
-            <li><b style="color:#00ff88;">Ruby fundamentals</b> from scratch</li>
-            <li>Installing Ruby and setting up your development environment</li>
-            <li>Variables, data types, and operators</li>
-            <li>Input and output</li>
-            <li>Conditional statements and loops</li>
-            <li>Methods and functions</li>
-            <li>Arrays and hashes</li>
-            <li>String manipulation</li>
-            <li>Object-Oriented Programming (OOP)</li>
-            <li>Classes, objects, inheritance, and modules</li>
-            <li>Exception handling</li>
-            <li>File handling</li>
-            <li>Working with Ruby Gems</li>
-            <li>Ruby coding best practices</li>
-            <li>Mini projects with complete solutions</li>
-            <li>Practice exercises and quizzes</li>
-            <li>Interview questions for beginners</li>
+    <!-- ===== TABLE OF CONTENTS ===== -->
+    <nav class="toc">
+        <div class="toc-title">📑 Table of Contents</div>
+        <ul class="toc-list">
+            <li><a href="#intro"><span class="num">01</span> Introduction</a></li>
+            <li><a href="#why"><span class="num">02</span> Why Ruby Matters</a></li>
+            <li><a href="#basics"><span class="num">03</span> Ruby Fundamentals</a></li>
+            <li><a href="#datatypes"><span class="num">04</span> Data Types</a></li>
+            <li><a href="#control"><span class="num">05</span> Control Flow</a></li>
+            <li><a href="#methods"><span class="num">06</span> Methods &amp; Blocks</a></li>
+            <li><a href="#oop"><span class="num">07</span> Object-Oriented Ruby</a></li>
+            <li><a href="#modules"><span class="num">08</span> Modules &amp; Mixins</a></li>
+            <li><a href="#files"><span class="num">09</span> File Handling</a></li>
+            <li><a href="#gems"><span class="num">10</span> Gems &amp; Bundler</a></li>
+            <li><a href="#metasploit"><span class="num">11</span> Ruby in Metasploit</a></li>
+            <li><a href="#security"><span class="num">12</span> Security Scripting</a></li>
+            <li><a href="#advanced"><span class="num">13</span> Advanced Topics</a></li>
+            <li><a href="#best"><span class="num">14</span> Best Practices</a></li>
+            <li><a href="#legal"><span class="num">15</span> Legal &amp; Ethics</a></li>
+            <li><a href="#conclusion"><span class="num">16</span> Conclusion</a></li>
         </ul>
+    </nav>
 
-        <!-- ===== DETAILS ===== -->
+    <!-- ===== 01 INTRO ===== -->
+    <section class="section" id="intro">
+        <span class="section-number">01 · INTRODUCTION</span>
+        <h2 class="section-title">
+            <span class="icon">💎</span>
+            What Is Ruby?
+        </h2>
         <p>
-            Each chapter includes easy-to-follow explanations, real-world coding examples, expected outputs, summaries, and practice activities to reinforce your learning.
+            <strong>Ruby</strong> is a dynamic, open-source programming language created by <em>Yukihiro "Matz" Matsumoto</em> in 1995. It was designed with a single guiding principle: <strong>programmer happiness</strong>. Ruby's syntax is elegant, expressive, and a joy to read — it often reads like plain English.
         </p>
         <p>
-            By the end of this book, you will be able to write Ruby programs confidently and understand the core concepts needed for web development, scripting, automation, and further learning with Ruby on Rails.
+            Ruby became globally famous thanks to the <strong>Ruby on Rails</strong> web framework, which powered companies like GitHub, Shopify, Airbnb, and Basecamp. But Ruby's influence goes far beyond web development — it's also the language behind <strong>Metasploit</strong>, the world's most-used penetration testing framework.
         </p>
-
-        <hr/>
-
-        <!-- ===== PERFECT FOR ===== -->
-        <h2 id="perfect">🎯 This Book Is Perfect For</h2>
-
-        <ul>
-            <li>Beginners with no programming experience</li>
-            <li>College and university students</li>
-            <li>Computer science learners</li>
-            <li>Self-taught programmers</li>
-            <li>Coding bootcamp students</li>
-            <li>Anyone interested in learning Ruby</li>
-        </ul>
-
-        <!-- ===== FINAL CTA ===== -->
-        <div class="book-highlight" style="border-color:#ffcc00;background:linear-gradient(135deg,rgba(255,204,0,0.05),rgba(0,255,136,0.05));">
-            <p style="color:#ffcc00;font-weight:700;font-size:18px;">
-                🚀 Start Your Programming Journey Today!
-            </p>
-            <p style="color:#b0b8c8;font-size:16px;">
-                Discover how enjoyable and practical Ruby programming can be!
-            </p>
-            <br/>
-            <a class="main-link" href="https://www.amazon.com/dp/B0H9J72WZ8" target="_blank" rel="noopener" 
-               style="display:inline-block;padding:15px 42px;background:linear-gradient(135deg,#ffcc00,#ff9900);color:#000000 !important;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;transition:all 0.3s ease;letter-spacing:0.5px;">
-                🛒 Buy Now on Amazon
-            </a>
-            <p class="small-note" style="color:#6a7290 !important;font-size:13px;margin-top:12px;">
-                Limited Time Offer — Get Your Copy Today!
-            </p>
+        <p>
+            For ethical hackers and security researchers, learning Ruby is a strategic investment. It opens the door to <em>writing custom Metasploit modules</em>, <em>building security tools</em>, and understanding the internals of one of the most important hacking frameworks ever built.
+        </p>
+        <div class="callout info">
+            <strong>💡 Note:</strong> Ruby comes pre-installed on Kali Linux and macOS. To check your version, run <code>ruby -v</code> in the terminal. We recommend Ruby 3.x for modern features.
         </div>
+    </section>
 
-        <hr/>
-
-        <!-- ===== SHARE SECTION ===== -->
-        <div class="share-section">
-            <p>📤 Share this book recommendation with your network</p>
-            <div class="share-buttons">
-                <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=Learn%20Ruby%20Programming%20the%20Easy%20Way!%20-%20A%20Must-Read%20for%20Beginners!%20%23Ruby%20%23Programming%20%23LearnToCode','_blank');return false;">
-                    🐦 Twitter
-                </a>
-                <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    📘 Facebook
-                </a>
-                <a href="#" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    💼 LinkedIn
-                </a>
+    <!-- ===== 02 WHY ===== -->
+    <section class="section" id="why">
+        <span class="section-number">02 · WHY RUBY MATTERS</span>
+        <h2 class="section-title">
+            <span class="icon">💡</span>
+            Why Learn Ruby for Hacking?
+        </h2>
+        <p>
+            You might wonder: <em>"Why Ruby when Python, Bash, and Go exist?"</em> The answer is simple: <strong>Metasploit</strong>. The most widely used exploitation framework in the world is written in Ruby. If you want to write custom modules, understand its internals, or extend its capabilities, you need Ruby.
+        </p>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">💥</span>
+                <h4>Metasploit Language</h4>
+                <p>Write custom exploits, payloads, and post-exploitation modules for Metasploit.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📖</span>
+                <h4>Elegant Syntax</h4>
+                <p>Ruby reads like English. Code is beautiful, concise, and expressive.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>Everything is an Object</h4>
+                <p>Pure OOP — even numbers and strings are objects. Clean, consistent design.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">⚡</span>
+                <h4>Metaprogramming</h4>
+                <p>Write code that writes code. Extremely powerful for building tools and DSLs.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📦</span>
+                <h4>Rich Gem Ecosystem</h4>
+                <p>RubyGems gives you 170,000+ libraries for everything from HTTP to crypto.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔧</span>
+                <h4>Security Tooling</h4>
+                <p>Many pentest tools (BeEF, Ronin, WPScan) are written in Ruby.</p>
             </div>
         </div>
+        <div class="callout">
+            <strong>🔑 Key Insight:</strong> Python is your general-purpose hacking language. Ruby is your <em>Metasploit-language</em>. Learning both makes you a much more versatile hacker.
+        </div>
+    </section>
 
-    </div>
+    <!-- ===== 03 BASICS ===== -->
+    <section class="section" id="basics">
+        <span class="section-number">03 · FUNDAMENTALS</span>
+        <h2 class="section-title">
+            <span class="icon">📚</span>
+            Ruby Fundamentals
+        </h2>
+        <p>
+            Ruby is famous for its readability. Let's start with the classic first program — but Ruby-style.
+        </p>
+
+        <h3>Your First Ruby Script</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="cmt"># hello.rb — your first Ruby script</span>
+<span class="fn">puts</span> <span class="str">"Hello, Ethical Hacker!"</span>
+<span class="fn">puts</span> <span class="str">"Welcome to Ruby Programming"</span></code>
+        </div>
+        <p>Run it from the terminal:</p>
+        <div class="code-block" data-lang="bash">
+<code>ruby hello.rb</code>
+        </div>
+
+        <div class="callout info">
+            <strong>💡 Note:</strong> In Ruby, <code>puts</code> (put string) prints text with a newline. <code>print</code> prints without a newline. <code>p</code> prints with quotes (for debugging).
+        </div>
+
+        <h3>Variables &amp; Data</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="cmt"># Local variables (lowercase)</span>
+<span class="var">target</span> = <span class="str">"192.168.1.100"</span>
+<span class="var">port</span> = <span class="num">22</span>
+<span class="var">is_open</span> = <span class="kw">true</span>
+<span class="var">version</span> = <span class="num">3.2</span>
+
+<span class="cmt"># String interpolation (double quotes only)</span>
+<span class="fn">puts</span> <span class="str">"Target: <span class="var">#{target}</span> on port <span class="var">#{port}</span>"</span>
+
+<span class="cmt"># Constants (start with uppercase)</span>
+<span class="cls">DEFAULT_PORT</span> = <span class="num">22</span>
+
+<span class="cmt"># Symbols (immutable identifiers, very common in Ruby)</span>
+<span class="var">status</span> = :open</code>
+        </div>
+
+        <h3>Basic Operators</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Operator</th><th>Meaning</th><th>Example</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>+</code></td><td>Addition</td><td><code>5 + 3 = 8</code></td></tr>
+                    <tr><td><code>-</code></td><td>Subtraction</td><td><code>5 - 3 = 2</code></td></tr>
+                    <tr><td><code>*</code></td><td>Multiplication</td><td><code>5 * 3 = 15</code></td></tr>
+                    <tr><td><code>/</code></td><td>Division</td><td><code>10 / 3 = 3</code></td></tr>
+                    <tr><td><code>%</code></td><td>Modulus</td><td><code>5 % 3 = 2</code></td></tr>
+                    <tr><td><code>**</code></td><td>Exponent</td><td><code>2 ** 8 = 256</code></td></tr>
+                    <tr><td><code>==</code></td><td>Equal</td><td><code>5 == 5 → true</code></td></tr>
+                    <tr><td><code>!=</code></td><td>Not equal</td><td><code>5 != 3 → true</code></td></tr>
+                    <tr><td><code>&amp;&amp; / and</code></td><td>Logical AND</td><td><code>true &amp;&amp; false → false</code></td></tr>
+                    <tr><td><code>|| / or</code></td><td>Logical OR</td><td><code>true || false → true</code></td></tr>
+                    <tr><td><code>!</code></td><td>Logical NOT</td><td><code>!true → false</code></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ===== 04 DATA TYPES ===== -->
+    <section class="section" id="datatypes">
+        <span class="section-number">04 · DATA TYPES</span>
+        <h2 class="section-title">
+            <span class="icon">📦</span>
+            Data Types &amp; Structures
+        </h2>
+        <p>
+            In Ruby, <strong>everything is an object</strong>. Even numbers, strings, and booleans have methods you can call on them. This elegant design makes Ruby remarkably consistent.
+        </p>
+
+        <h3>Strings</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="var">url</span> = <span class="str">"https://target.com/admin"</span>
+
+<span class="fn">puts</span> <span class="var">url</span>.<span class="fn">upcase</span>              <span class="cmt"># HTTPS://TARGET.COM/ADMIN</span>
+<span class="fn">puts</span> <span class="var">url</span>.<span class="fn">length</span>              <span class="cmt"># 27</span>
+<span class="fn">puts</span> <span class="var">url</span>.<span class="fn">include?</span>(<span class="str">"admin"</span>)   <span class="cmt"># true</span>
+<span class="fn">puts</span> <span class="var">url</span>.<span class="fn">split</span>(<span class="str">"/"</span>)          <span class="cmt"># ["https:", "", "target.com", "admin"]</span>
+<span class="fn">puts</span> <span class="var">url</span>.<span class="fn">reverse</span>
+<span class="fn">puts</span> <span class="var">url</span>[<span class="num">8</span>..<span class="num">17</span>]              <span class="cmt"># target.com</span>
+
+<span class="cmt"># String interpolation</span>
+<span class="var">user</span> = <span class="str">"admin"</span>
+<span class="fn">puts</span> <span class="str">"Logged in as <span class="var">#{user}</span>"</span></code>
+        </div>
+
+        <h3>Arrays — Ordered Collections</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="var">ports</span> = [<span class="num">21</span>, <span class="num">22</span>, <span class="num">80</span>, <span class="num">443</span>, <span class="num">3306</span>]
+
+<span class="var">ports</span>.<span class="fn">push</span>(<span class="num">8080</span>)              <span class="cmt"># Add to end</span>
+<span class="var">ports</span>.<span class="fn">delete</span>(<span class="num">21</span>)              <span class="cmt"># Remove value</span>
+<span class="var">ports</span>.<span class="fn">sort</span>                     <span class="cmt"># Returns sorted array</span>
+
+<span class="fn">puts</span> <span class="var">ports</span>[<span class="num">0</span>]                  <span class="cmt"># 22</span>
+<span class="fn">puts</span> <span class="var">ports</span>[-<span class="num">1</span>]                 <span class="cmt"># Last element</span>
+<span class="fn">puts</span> <span class="var">ports</span>.<span class="fn">length</span>               <span class="cmt"># 5</span>
+<span class="fn">puts</span> <span class="var">ports</span>.<span class="fn">first</span>                <span class="cmt"># 22</span>
+
+<span class="cmt"># Iterate with each</span>
+<span class="var">ports</span>.<span class="fn">each</span> <span class="kw">do</span> |port|
+  <span class="fn">puts</span> <span class="str">"Scanning port <span class="var">#{port}</span>"</span>
+<span class="kw">end</span>
+
+<span class="cmt"># Map — transform each element</span>
+<span class="var">doubled</span> = <span class="var">ports</span>.<span class="fn">map</span> { |p| p * <span class="num">2</span> }
+<span class="fn">puts</span> <span class="var">doubled</span>.<span class="fn">inspect</span>
+
+<span class="cmt"># Select — filter elements</span>
+<span class="var">low_ports</span> = <span class="var">ports</span>.<span class="fn">select</span> { |p| p &lt; <span class="num">1000</span> }
+<span class="fn">puts</span> <span class="var">low_ports</span>.<span class="fn">inspect</span></code>
+        </div>
+
+        <h3>Hashes — Key-Value Pairs</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="cmt"># Modern hash syntax (symbols as keys)</span>
+<span class="var">target</span> = {
+  <span class="var">ip</span>: <span class="str">"192.168.1.1"</span>,
+  <span class="var">ports</span>: [<span class="num">22</span>, <span class="num">80</span>, <span class="num">443</span>],
+  <span class="var">os</span>: <span class="str">"Linux"</span>,
+  <span class="var">vulnerable</span>: <span class="kw">true</span>
+}
+
+<span class="fn">puts</span> <span class="var">target</span>[:ip]                <span class="cmt"># 192.168.1.1</span>
+<span class="var">target</span>[:country] = <span class="str">"IN"</span>        <span class="cmt"># Add new key</span>
+
+<span class="cmt"># Iterate over hash</span>
+<span class="var">target</span>.<span class="fn">each</span> <span class="kw">do</span> |key, value|
+  <span class="fn">puts</span> <span class="str">"<span class="var">#{key}</span>: <span class="var">#{value}</span>"</span>
+<span class="kw">end</span>
+
+<span class="cmt"># Keys and values</span>
+<span class="fn">puts</span> <span class="var">target</span>.<span class="fn">keys</span>.<span class="fn">inspect</span>
+<span class="fn">puts</span> <span class="var">target</span>.<span class="fn">values</span>.<span class="fn">inspect</span></code>
+        </div>
+
+        <h3>Symbols — Ruby's Secret Weapon</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="cmt"># Symbols are immutable, reusable identifiers</span>
+<span class="var">status</span> = :open
+<span class="var">status2</span> = :open
+
+<span class="fn">puts</span> <span class="var">status</span>.<span class="fn">object_id</span> == <span class="var">status2</span>.<span class="fn">object_id</span>  <span class="cmt"># true (same object!)</span>
+
+<span class="cmt"># Strings create new objects each time</span>
+<span class="var">a</span> = <span class="str">"open"</span>
+<span class="var">b</span> = <span class="str">"open"</span>
+<span class="fn">puts</span> <span class="var">a</span>.<span class="fn">object_id</span> == <span class="var">b</span>.<span class="fn">object_id</span>       <span class="cmt"># false</span>
+
+<span class="cmt"># Symbols are used as hash keys and method names</span>
+<span class="var">config</span> = { <span class="var">host</span>: <span class="str">"localhost"</span>, <span class="var">port</span>: <span class="num">8080</span> }</code>
+        </div>
+    </section>
+
+    <!-- ===== 05 CONTROL ===== -->
+    <section class="section" id="control">
+        <span class="section-number">05 · CONTROL FLOW</span>
+        <h2 class="section-title">
+            <span class="icon">🔀</span>
+            Control Flow — Making Decisions
+        </h2>
+
+        <h3>If / Elsif / Else</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="var">port</span> = <span class="num">443</span>
+
+<span class="kw">if</span> <span class="var">port</span> == <span class="num">22</span>
+  <span class="fn">puts</span> <span class="str">"SSH detected"</span>
+<span class="kw">elsif</span> <span class="var">port</span> == <span class="num">80</span>
+  <span class="fn">puts</span> <span class="str">"HTTP detected"</span>
+<span class="kw">elsif</span> <span class="var">port</span> == <span class="num">443</span>
+  <span class="fn">puts</span> <span class="str">"HTTPS detected"</span>
+<span class="kw">else</span>
+  <span class="fn">puts</span> <span class="str">"Unknown service"</span>
+<span class="kw">end</span>
+
+<span class="cmt"># Modifier form (very Ruby!)</span>
+<span class="fn">puts</span> <span class="str">"Port is open"</span> <span class="kw">if</span> <span class="var">port</span> == <span class="num">443</span></code>
+        </div>
+
+        <h3>Unless — Ruby's Unique Conditional</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="cmt"># unless = "if not"</span>
+<span class="var">authenticated</span> = <span class="kw">false</span>
+
+<span class="kw">unless</span> <span class="var">authenticated</span>
+  <span class="fn">puts</span> <span class="str">"Access denied"</span>
+<span class="kw">end</span>
+
+<span class="fn">puts</span> <span class="str">"Granting access"</span> <span class="kw">unless</span> <span class="var">authenticated</span></code>
+        </div>
+
+        <h3>Case Statement</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="var">port</span> = <span class="num">443</span>
+
+<span class="kw">case</span> <span class="var">port</span>
+<span class="kw">when</span> <span class="num">22</span>
+  <span class="fn">puts</span> <span class="str">"SSH"</span>
+<span class="kw">when</span> <span class="num">80</span>, <span class="num">443</span>
+  <span class="fn">puts</span> <span class="str">"Web service"</span>
+<span class="kw">when</span> <span class="num">3306</span>
+  <span class="fn">puts</span> <span class="str">"MySQL"</span>
+<span class="kw">else</span>
+  <span class="fn">puts</span> <span class="str">"Unknown"</span>
+<span class="kw">end</span></code>
+        </div>
+
+        <h3>Loops</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="cmt"># Times — run block N times</span>
+<span class="num">5</span>.<span class="fn">times</span> <span class="kw">do</span> |i|
+  <span class="fn">puts</span> <span class="str">"Attempt <span class="var">#{i + 1}</span>"</span>
+<span class="kw">end</span>
+
+<span class="cmt"># Each — iterate over collection</span>
+[<span class="num">22</span>, <span class="num">80</span>, <span class="num">443</span>].<span class="fn">each</span> <span class="kw">do</span> |port|
+  <span class="fn">puts</span> <span class="str">"Scanning <span class="var">#{port}</span>"</span>
+<span class="kw">end</span>
+
+<span class="cmt"># Range</span>
+(<span class="num">1</span>..<span class="num">10</span>).<span class="fn">each</span> { |n| <span class="fn">puts</span> n }
+
+<span class="cmt"># While loop</span>
+<span class="var">i</span> = <span class="num">0</span>
+<span class="kw">while</span> <span class="var">i</span> &lt; <span class="num">5</span>
+  <span class="fn">puts</span> <span class="str">"Count: <span class="var">#{i}</span>"</span>
+  <span class="var">i</span> += <span class="num">1</span>
+<span class="kw">end</span>
+
+<span class="cmt"># Upto and Downto</span>
+<span class="num">1</span>.<span class="fn">upto</span>(<span class="num">5</span>) { |n| <span class="fn">puts</span> n }
+<span class="num">5</span>.<span class="fn">downto</span>(<span class="num">1</span>) { |n| <span class="fn">puts</span> n }</code>
+        </div>
+
+        <h3>Loop Control</h3>
+        <div class="code-block" data-lang="ruby">
+<code>(<span class="num">1</span>..<span class="num">100</span>).<span class="fn">each</span> <span class="kw">do</span> |n|
+  <span class="kw">next</span> <span class="kw">if</span> n.<span class="fn">even?</span>        <span class="cmt"># Skip evens</span>
+  <span class="kw">break</span> <span class="kw">if</span> n &gt; <span class="num">20</span>          <span class="cmt"># Stop at 20</span>
+  <span class="fn">puts</span> n
+<span class="kw">end</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 06 METHODS ===== -->
+    <section class="section" id="methods">
+        <span class="section-number">06 · METHODS &amp; BLOCKS</span>
+        <h2 class="section-title">
+            <span class="icon">🧩</span>
+            Methods, Blocks &amp; Procs
+        </h2>
+
+        <h3>Defining Methods</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">def</span> <span class="fn">scan_port</span>(host, port)
+  <span class="kw">require</span> <span class="str">'socket'</span>
+  <span class="kw">begin</span>
+    sock = <span class="cls">Socket</span>.<span class="fn">new</span>(<span class="cls">Socket</span>::<span class="cls">AF_INET</span>, <span class="cls">Socket</span>::<span class="cls">SOCK_STREAM</span>)
+    sock.<span class="fn">connect</span>(<span class="cls">Socket</span>.<span class="fn">sockaddr_in</span>(port, host))
+    sock.<span class="fn">close</span>
+    <span class="kw">true</span>
+  <span class="kw">rescue</span>
+    <span class="kw">false</span>
+  <span class="kw">end</span>
+<span class="kw">end</span>
+
+<span class="kw">if</span> <span class="fn">scan_port</span>(<span class="str">"192.168.1.1"</span>, <span class="num">22</span>)
+  <span class="fn">puts</span> <span class="str">"[+] Port 22 is OPEN"</span>
+<span class="kw">end</span></code>
+        </div>
+
+        <h3>Default &amp; Keyword Arguments</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">def</span> <span class="fn">brute_force</span>(target, port: <span class="num">22</span>, threads: <span class="num">10</span>, verbose: <span class="kw">false</span>)
+  <span class="fn">puts</span> <span class="str">"Attacking <span class="var">#{target}</span>:<span class="var">#{port}</span>"</span> <span class="kw">if</span> verbose
+  <span class="cmt"># ... logic ...</span>
+<span class="kw">end</span>
+
+<span class="fn">brute_force</span>(<span class="str">"10.0.0.1"</span>)
+<span class="fn">brute_force</span>(<span class="str">"10.0.0.1"</span>, port: <span class="num">21</span>, verbose: <span class="kw">true</span>)</code>
+        </div>
+
+        <h3>Implicit Return</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="cmt"># The last expression is automatically returned</span>
+<span class="kw">def</span> <span class="fn">add</span>(a, b)
+  a + b       <span class="cmt"># returned implicitly</span>
+<span class="kw">end</span>
+
+<span class="fn">puts</span> <span class="fn">add</span>(<span class="num">5</span>, <span class="num">3</span>)  <span class="cmt"># 8</span></code>
+        </div>
+
+        <h3>Blocks — Ruby's Superpower</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="cmt"># Block with do...end (multi-line)</span>
+[<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>].<span class="fn">each</span> <span class="kw">do</span> |n|
+  <span class="fn">puts</span> n
+<span class="kw">end</span>
+
+<span class="cmt"># Block with { } (single-line)</span>
+[<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>].<span class="fn">each</span> { |n| <span class="fn">puts</span> n }
+
+<span class="cmt"># Custom method that yields to a block</span>
+<span class="kw">def</span> <span class="fn">with_timing</span>
+  start = <span class="cls">Time</span>.<span class="fn">now</span>
+  <span class="kw">yield</span>
+  <span class="fn">puts</span> <span class="str">"Took <span class="var">#{Time.now - start}</span> seconds"</span>
+<span class="kw">end</span>
+
+<span class="fn">with_timing</span> <span class="kw">do</span>
+  <span class="fn">sleep</span> <span class="num">1</span>
+<span class="kw">end</span></code>
+        </div>
+
+        <h3>Procs and Lambdas</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="cmt"># Proc — a block stored in a variable</span>
+<span class="var">greet</span> = <span class="cls">Proc</span>.<span class="fn">new</span> { |name| <span class="fn">puts</span> <span class="str">"Hello, <span class="var">#{name}</span>"</span> }
+<span class="var">greet</span>.<span class="fn">call</span>(<span class="str">"Hacker"</span>)
+
+<span class="cmt"># Lambda — stricter version of proc</span>
+<span class="var">square</span> = ->(x) { x ** <span class="num">2</span> }
+<span class="fn">puts</span> <span class="var">square</span>.<span class="fn">call</span>(<span class="num">5</span>)  <span class="cmt"># 25</span>
+
+<span class="cmt"># Passing procs to methods</span>
+<span class="fn">puts</span> [<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>].<span class="fn">map</span>(&amp;<span class="var">square</span>).<span class="fn">inspect</span>  <span class="cmt"># [1, 4, 9]</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 07 OOP ===== -->
+    <section class="section" id="oop">
+        <span class="section-number">07 · OBJECT-ORIENTED RUBY</span>
+        <h2 class="section-title">
+            <span class="icon">🏛️</span>
+            Classes &amp; Objects
+        </h2>
+        <p>
+            Ruby is a pure object-oriented language. Everything — even <code>nil</code> — is an object. Classes define blueprints for objects, complete with attributes (state) and methods (behavior).
+        </p>
+
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">class</span> <span class="cls">Target</span>
+  <span class="cmt"># Attributes with getters and setters</span>
+  <span class="fn">attr_accessor</span> :ip, :ports
+  <span class="fn">attr_reader</span> :os
+  <span class="fn">attr_writer</span> :vulnerable
+
+  <span class="cmt"># Constructor</span>
+  <span class="kw">def</span> <span class="fn">initialize</span>(ip, os: <span class="str">"Unknown"</span>)
+    <span class="var">@ip</span> = ip
+    <span class="var">@os</span> = os
+    <span class="var">@ports</span> = []
+  <span class="kw">end</span>
+
+  <span class="cmt"># Instance method</span>
+  <span class="kw">def</span> <span class="fn">add_port</span>(port)
+    <span class="var">@ports</span> &lt;&lt; port
+  <span class="kw">end</span>
+
+  <span class="kw">def</span> <span class="fn">to_s</span>
+    <span class="str">"Target(<span class="var">#{@ip}</span>, OS: <span class="var">#{@os}</span>, Ports: <span class="var">#{@ports.join(', ')}</span>)"</span>
+  <span class="kw">end</span>
+<span class="kw">end</span>
+
+<span class="cmt"># Create objects</span>
+<span class="var">t1</span> = <span class="cls">Target</span>.<span class="fn">new</span>(<span class="str">"192.168.1.1"</span>, os: <span class="str">"Linux"</span>)
+<span class="var">t1</span>.<span class="fn">add_port</span>(<span class="num">22</span>)
+<span class="var">t1</span>.<span class="fn">add_port</span>(<span class="num">80</span>)
+
+<span class="fn">puts</span> <span class="var">t1</span>  <span class="cmt"># Target(192.168.1.1, OS: Linux, Ports: 22, 80)</span></code>
+        </div>
+
+        <h3>Inheritance</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">class</span> <span class="cls">WebTarget</span> &lt; <span class="cls">Target</span>
+  <span class="kw">def</span> <span class="fn">initialize</span>(ip, domain)
+    <span class="fn">super</span>(ip, os: <span class="str">"Linux"</span>)
+    <span class="var">@domain</span> = domain
+  <span class="kw">end</span>
+
+  <span class="kw">def</span> <span class="fn">to_s</span>
+    <span class="str">"<span class="var">#{super}</span> [<span class="var">#{@domain}</span>]"</span>
+  <span class="kw">end</span>
+<span class="kw">end</span>
+
+<span class="var">web</span> = <span class="cls">WebTarget</span>.<span class="fn">new</span>(<span class="str">"10.0.0.1"</span>, <span class="str">"example.com"</span>)
+<span class="fn">puts</span> <span class="var">web</span></code>
+        </div>
+
+        <h3>Method Visibility</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">class</span> <span class="cls">Exploit</span>
+  <span class="kw">def</span> <span class="fn">run</span>          <span class="cmt"># public by default</span>
+    <span class="fn">setup</span>
+    <span class="fn">execute</span>
+  <span class="kw">end</span>
+
+  <span class="kw">private</span>
+
+  <span class="kw">def</span> <span class="fn">setup</span>
+    <span class="fn">puts</span> <span class="str">"Setting up..."</span>
+  <span class="kw">end</span>
+
+  <span class="kw">def</span> <span class="fn">execute</span>
+    <span class="fn">puts</span> <span class="str">"Executing..."</span>
+  <span class="kw">end</span>
+<span class="kw">end</span>
+
+<span class="cls">Exploit</span>.<span class="fn">new</span>.<span class="fn">run</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 08 MODULES ===== -->
+    <section class="section" id="modules">
+        <span class="section-number">08 · MODULES &amp; MIXINS</span>
+        <h2 class="section-title">
+            <span class="icon">🧬</span>
+            Modules, Mixins &amp; Namespaces
+        </h2>
+        <p>
+            Modules are Ruby's answer to multiple inheritance. They let you share behavior across classes without the complications of traditional inheritance. This is called a <strong>mixin</strong>.
+        </p>
+
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">module</span> <span class="cls">Scannable</span>
+  <span class="kw">def</span> <span class="fn">scan</span>(target)
+    <span class="fn">puts</span> <span class="str">"Scanning <span class="var">#{target}</span>..."</span>
+  <span class="kw">end</span>
+
+  <span class="kw">def</span> <span class="fn">report</span>
+    <span class="fn">puts</span> <span class="str">"Report generated by <span class="var">#{self.class}</span>"</span>
+  <span class="kw">end</span>
+<span class="kw">end</span>
+
+<span class="kw">class</span> <span class="cls">NmapScanner</span>
+  <span class="fn">include</span> <span class="cls">Scannable</span>
+<span class="kw">end</span>
+
+<span class="kw">class</span> <span class="cls">NiktoScanner</span>
+  <span class="fn">include</span> <span class="cls">Scannable</span>
+<span class="kw">end</span>
+
+<span class="cls">NmapScanner</span>.<span class="fn">new</span>.<span class="fn">scan</span>(<span class="str">"192.168.1.1"</span>)
+<span class="cls">NiktoScanner</span>.<span class="fn">new</span>.<span class="fn">report</span></code>
+        </div>
+
+        <h3>Module Methods &amp; Namespacing</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">module</span> <span class="cls">Security</span>
+  <span class="kw">def</span> <span class="var">self</span>.<span class="fn">hash_md5</span>(data)
+    <span class="kw">require</span> <span class="str">'digest'</span>
+    <span class="cls">Digest</span>::<span class="cls">MD5</span>.<span class="fn">hexdigest</span>(data)
+  <span class="kw">end</span>
+
+  <span class="kw">class</span> <span class="cls">Analyzer</span>
+    <span class="kw">def</span> <span class="fn">analyze</span>(file)
+      <span class="fn">puts</span> <span class="str">"Analyzing <span class="var">#{file}</span>"</span>
+    <span class="kw">end</span>
+  <span class="kw">end</span>
+<span class="kw">end</span>
+
+<span class="fn">puts</span> <span class="cls">Security</span>.<span class="fn">hash_md5</span>(<span class="str">"password"</span>)
+
+<span class="var">analyzer</span> = <span class="cls">Security</span>::<span class="cls">Analyzer</span>.<span class="fn">new</span>
+<span class="var">analyzer</span>.<span class="fn">analyze</span>(<span class="str">"malware.bin"</span>)</code>
+        </div>
+    </section>
+
+    <!-- ===== 09 FILES ===== -->
+    <section class="section" id="files">
+        <span class="section-number">09 · FILE HANDLING</span>
+        <h2 class="section-title">
+            <span class="icon">📁</span>
+            File Handling &amp; I/O
+        </h2>
+        <p>
+            Reading wordlists, writing scan results, parsing logs — file I/O is critical for security scripting.
+        </p>
+
+        <div class="code-block" data-lang="ruby">
+<code><span class="cmt"># Read a file line by line</span>
+<span class="cls">File</span>.<span class="fn">open</span>(<span class="str">"wordlist.txt"</span>, <span class="str">"r"</span>) <span class="kw">do</span> |file|
+  file.<span class="fn">each_line</span> <span class="kw">do</span> |line|
+    <span class="fn">puts</span> line.<span class="fn">strip</span>
+  <span class="kw">end</span>
+<span class="kw">end</span>
+
+<span class="cmt"># Read entire file</span>
+<span class="var">content</span> = <span class="cls">File</span>.<span class="fn">read</span>(<span class="str">"config.txt"</span>)
+
+<span class="cmt"># Read all lines into array</span>
+<span class="var">lines</span> = <span class="cls">File</span>.<span class="fn">readlines</span>(<span class="str">"targets.txt"</span>, chomp: <span class="kw">true</span>)
+
+<span class="cmt"># Write to a file (overwrites)</span>
+<span class="cls">File</span>.<span class="fn">write</span>(<span class="str">"results.txt"</span>, <span class="str">"Scan complete\n"</span>)
+
+<span class="cmt"># Append to a file</span>
+<span class="cls">File</span>.<span class="fn">open</span>(<span class="str">"log.txt"</span>, <span class="str">"a"</span>) <span class="kw">do</span> |f|
+  f.<span class="fn">puts</span> <span class="str">"[+] Target scanned at <span class="var">#{Time.now}</span>"</span>
+<span class="kw">end</span>
+
+<span class="cmt"># Check if file exists</span>
+<span class="fn">puts</span> <span class="cls">File</span>.<span class="fn">exist?</span>(<span class="str">"scan.txt"</span>)  <span class="cmt"># true/false</span>
+
+<span class="cmt"># Parse JSON</span>
+<span class="kw">require</span> <span class="str">'json'</span>
+<span class="var">data</span> = <span class="cls">JSON</span>.<span class="fn">parse</span>(<span class="cls">File</span>.<span class="fn">read</span>(<span class="str">"scan.json"</span>))
+<span class="fn">puts</span> <span class="var">data</span>[<span class="str">"hosts"</span>]
+
+<span class="cmt"># Write JSON</span>
+<span class="cls">File</span>.<span class="fn">write</span>(<span class="str">"output.json"</span>, <span class="cls">JSON</span>.<span class="fn">pretty_generate</span>(<span class="var">data</span>))</code>
+        </div>
+    </section>
+
+    <!-- ===== 10 GEMS ===== -->
+    <section class="section" id="gems">
+        <span class="section-number">10 · GEMS &amp; BUNDLER</span>
+        <h2 class="section-title">
+            <span class="icon">📦</span>
+            Gems — Ruby's Package Manager
+        </h2>
+        <p>
+            Gems are Ruby's libraries. With over 170,000 gems available, you'll find a tool for almost anything. <code>bundler</code> manages project dependencies.
+        </p>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Install a gem globally</span>
+gem install requests
+
+<span class="cmt"># List installed gems</span>
+gem list
+
+<span class="cmt"># Update all gems</span>
+gem update
+
+<span class="cmt"># Search for a gem</span>
+gem search -r http</code>
+        </div>
+
+        <h3>Essential Gems for Security</h3>
+        <div class="tool-grid">
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🌐</span> httparty</div>
+                <p>Simple HTTP client. Great for API hacking and web scraping.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🕸️</span> nokogiri</div>
+                <p>HTML/XML parser. Ruby's answer to BeautifulSoup.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🔗</span> net-ssh</div>
+                <p>SSH client library. Automate SSH operations and brute-force.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">💥</span> metasploit-framework</div>
+                <p>The pentesting framework itself — used as a library in scripts.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">📡</span> packetfu</div>
+                <p>Packet crafting and sniffing library for network attacks.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🔐</span> openssl</div>
+                <p>Built-in crypto library. Encrypt, decrypt, hash, sign.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🔍</span> whois</div>
+                <p>WHOIS lookups from Ruby scripts.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">📊</span> colorize</div>
+                <p>Colorful terminal output. Makes scripts and reports prettier.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 11 METASPLOIT ===== -->
+    <section class="section" id="metasploit">
+        <span class="section-number">11 · RUBY IN METASPLOIT</span>
+        <h2 class="section-title">
+            <span class="icon">💥</span>
+            Ruby &amp; Metasploit — Writing Custom Modules
+        </h2>
+        <p>
+            Metasploit is written entirely in Ruby. Every exploit, payload, and post-exploitation module is a Ruby class. Learning Ruby lets you <strong>write your own modules</strong> and extend the framework.
+        </p>
+
+        <h3>Anatomy of a Metasploit Module</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">require</span> <span class="str">'msf/core'</span>
+
+<span class="kw">class</span> <span class="cls">MetasploitModule</span> &lt; <span class="cls">Msf</span>::<span class="cls">Auxiliary</span>
+  <span class="kw">def</span> <span class="fn">initialize</span>(info = {})
+    <span class="fn">super</span>(
+      <span class="str">'Name'</span>        =&gt; <span class="str">'Custom SSH Scanner'</span>,
+      <span class="str">'Description'</span> =&gt; <span class="str">'Scans for open SSH ports'</span>,
+      <span class="str">'Author'</span>      =&gt; <span class="str">'Hacker'</span>,
+      <span class="str">'License'</span>     =&gt; <span class="cls">MSF_LICENSE</span>
+    )
+
+    <span class="fn">register_options</span>([
+      <span class="cls">Opt</span>::<span class="cls">RHOSTS</span>.<span class="fn">new</span>(<span class="kw">true</span>),
+      <span class="cls">Opt</span>::<span class="cls">RPORT</span>.<span class="fn">new</span>(<span class="kw">true</span>, <span class="str">'SSH port'</span>, <span class="num">22</span>)
+    ])
+  <span class="kw">end</span>
+
+  <span class="kw">def</span> <span class="fn">run</span>
+    <span class="fn">print_status</span>(<span class="str">"Scanning <span class="var">#{rhost}</span>:<span class="var">#{rport}</span>"</span>)
+    <span class="kw">begin</span>
+      <span class="fn">connect</span>
+      <span class="fn">print_good</span>(<span class="str">"SSH is open on <span class="var">#{rhost}</span>"</span>)
+      <span class="fn">disconnect</span>
+    <span class="kw">rescue</span>
+      <span class="fn">print_error</span>(<span class="str">"Cannot connect"</span>)
+    <span class="kw">end</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></code>
+        </div>
+
+        <h3>Module Types in Metasploit</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Type</th><th>Purpose</th><th>Example</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>exploit</code></td><td>Vulnerability exploitation</td><td>ms17_010_eternalblue</td></tr>
+                    <tr><td><code>auxiliary</code></td><td>Scanning, fuzzing, sniffing</td><td>ssh_login</td></tr>
+                    <tr><td><code>payload</code></td><td>Code that runs on target</td><td>reverse_tcp</td></tr>
+                    <tr><td><code>encoder</code></td><td>Encode payloads to bypass AV</td><td>shikata_ga_nai</td></tr>
+                    <tr><td><code>post</code></td><td>Post-exploitation actions</td><td>hashdump</td></tr>
+                    <tr><td><code>nop</code></td><td>NOP generators</td><td>x64/single_byte</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout">
+            <strong>💡 Pro Tip:</strong> The best way to learn to write Metasploit modules is to study the existing ones. Browse <code>/usr/share/metasploit-framework/modules/</code> on Kali Linux and study the structure.
+        </div>
+    </section>
+
+    <!-- ===== 12 SECURITY ===== -->
+    <section class="section" id="security">
+        <span class="section-number">12 · SECURITY SCRIPTING</span>
+        <h2 class="section-title">
+            <span class="icon">🛡️</span>
+            Security Scripts in Ruby
+        </h2>
+
+        <h3>Script 1: Simple Port Scanner</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">require</span> <span class="str">'socket'</span>
+
+<span class="kw">def</span> <span class="fn">scan_port</span>(host, port, timeout: <span class="num">1</span>)
+  <span class="cls">Socket</span>.<span class="fn">tcp</span>(host, port, <span class="fn">connect_timeout</span>: timeout)
+  <span class="kw">true</span>
+<span class="kw">rescue</span> <span class="cls">Errno</span>::<span class="cls">ECONNREFUSED</span>, <span class="cls">SocketError</span>
+  <span class="kw">false</span>
+<span class="kw">end</span>
+
+<span class="var">target</span> = <span class="cls">ARGV</span>[<span class="num">0</span>] || <span class="str">"127.0.0.1"</span>
+<span class="fn">puts</span> <span class="str">"[*] Scanning <span class="var">#{target}</span>..."</span>
+
+(<span class="num">1</span>..<span class="num">1024</span>).<span class="fn">each</span> <span class="kw">do</span> |port|
+  <span class="kw">if</span> <span class="fn">scan_port</span>(target, port)
+    <span class="fn">puts</span> <span class="str">"[+] Port <span class="var">#{port}</span> OPEN"</span>
+  <span class="kw">end</span>
+<span class="kw">end</span>
+
+<span class="fn">puts</span> <span class="str">"[✓] Scan complete"</span></code>
+        </div>
+
+        <h3>Script 2: Multi-Threaded Scanner</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">require</span> <span class="str">'socket'</span>
+
+<span class="var">target</span> = <span class="str">"192.168.1.1"</span>
+<span class="var">threads</span> = []
+
+(<span class="num">1</span>..<span class="num">1024</span>).<span class="fn">each</span> <span class="kw">do</span> |port|
+  <span class="var">threads</span> &lt;&lt; <span class="cls">Thread</span>.<span class="fn">new</span> <span class="kw">do</span>
+    <span class="kw">begin</span>
+      <span class="cls">Socket</span>.<span class="fn">tcp</span>(target, port, <span class="fn">connect_timeout</span>: <span class="num">1</span>)
+      <span class="fn">puts</span> <span class="str">"[+] Port <span class="var">#{port}</span> OPEN"</span>
+    <span class="kw">rescue</span>
+      <span class="cmt"># closed</span>
+    <span class="kw">end</span>
+  <span class="kw">end</span>
+<span class="kw">end</span>
+
+<span class="var">threads</span>.<span class="fn">each</span>(&amp;:join)
+<span class="fn">puts</span> <span class="str">"Scan complete."</span></code>
+        </div>
+
+        <h3>Script 3: HTTP Directory Brute-Forcer</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">require</span> <span class="str">'net/http'</span>
+
+<span class="var">url</span> = <span class="str">"http://target.com"</span>
+<span class="var">wordlist</span> = <span class="str">"/usr/share/wordlists/dirb/common.txt"</span>
+
+<span class="cls">File</span>.<span class="fn">foreach</span>(wordlist) <span class="kw">do</span> |line|
+  path = line.<span class="fn">strip</span>
+  <span class="kw">next</span> <span class="kw">if</span> path.<span class="fn">empty?</span>
+
+  <span class="kw">begin</span>
+    uri = <span class="cls">URI</span>.<span class="fn">parse</span>(<span class="str">"<span class="var">#{url}</span>/<span class="var">#{path}</span>"</span>)
+    response = <span class="cls">Net</span>::<span class="cls">HTTP</span>.<span class="fn">get_response</span>(uri)
+    <span class="kw">unless</span> response.<span class="fn">code</span> == <span class="str">"404"</span>
+      <span class="fn">puts</span> <span class="str">"[+] <span class="var">#{response.code}</span> — <span class="var">#{uri}</span>"</span>
+    <span class="kw">end</span>
+  <span class="kw">rescue</span>
+    <span class="cmt"># skip errors</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></code>
+        </div>
+
+        <h3>Script 4: Hash Cracker</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">require</span> <span class="str">'digest'</span>
+
+<span class="var">target_hash</span> = <span class="str">"5f4dcc3b5aa765d61d8327deb882cf99"</span>  <span class="cmt"># md5("password")</span>
+
+<span class="cls">File</span>.<span class="fn">foreach</span>(<span class="str">"/usr/share/wordlists/rockyou.txt"</span>) <span class="kw">do</span> |line|
+  word = line.<span class="fn">strip</span>
+  <span class="kw">if</span> <span class="cls">Digest</span>::<span class="cls">MD5</span>.<span class="fn">hexdigest</span>(word) == target_hash
+    <span class="fn">puts</span> <span class="str">"[+] CRACKED: <span class="var">#{word}</span>"</span>
+    <span class="kw">break</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></code>
+        </div>
+
+        <h3>Script 5: Subdomain Enumerator</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">require</span> <span class="str">'resolv'</span>
+
+<span class="var">domain</span> = <span class="str">"example.com"</span>
+<span class="var">subs</span> = %w[www mail api dev admin test ftp blog shop]
+
+<span class="var">subs</span>.<span class="fn">each</span> <span class="kw">do</span> |sub|
+  <span class="kw">begin</span>
+    ip = <span class="cls">Resolv</span>.<span class="fn">getaddress</span>(<span class="str">"<span class="var">#{sub}</span>.<span class="var">#{domain}</span>"</span>)
+    <span class="fn">puts</span> <span class="str">"[+] <span class="var">#{sub}</span>.<span class="var">#{domain}</span> → <span class="var">#{ip}</span>"</span>
+  <span class="kw">rescue</span> <span class="cls">Resolv</span>::<span class="cls">ResolvError</span>
+    <span class="cmt"># not found</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 13 ADVANCED ===== -->
+    <section class="section" id="advanced">
+        <span class="section-number">13 · ADVANCED</span>
+        <h2 class="section-title">
+            <span class="icon">🚀</span>
+            Advanced Ruby Topics
+        </h2>
+
+        <h3>Metaprogramming — Code That Writes Code</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">class</span> <span class="cls">Exploit</span>
+  [<span class="str">:scan</span>, <span class="str">:exploit</span>, <span class="str">:report</span>].<span class="fn">each</span> <span class="kw">do</span> |method|
+    <span class="fn">define_method</span>(method) <span class="kw">do</span>
+      <span class="fn">puts</span> <span class="str">"Running <span class="var">#{method}</span>..."</span>
+    <span class="kw">end</span>
+  <span class="kw">end</span>
+<span class="kw">end</span>
+
+<span class="var">e</span> = <span class="cls">Exploit</span>.<span class="fn">new</span>
+<span class="var">e</span>.<span class="fn">scan</span>      <span class="cmt"># Running scan...</span>
+<span class="var">e</span>.<span class="fn">exploit</span>   <span class="cmt"># Running exploit...</span></code>
+        </div>
+
+        <h3>method_missing — Dynamic Method Handling</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">class</span> <span class="cls">FlexibleScanner</span>
+  <span class="kw">def</span> <span class="fn">method_missing</span>(name, *args)
+    <span class="kw">if</span> name.<span class="fn">to_s</span>.<span class="fn">start_with?</span>(<span class="str">"scan_"</span>)
+      protocol = name.<span class="fn">to_s</span>.<span class="fn">sub</span>(<span class="str">"scan_"</span>, <span class="str">""</span>)
+      <span class="fn">puts</span> <span class="str">"Scanning via <span class="var">#{protocol}</span>..."</span>
+    <span class="kw">else</span>
+      <span class="fn">super</span>
+    <span class="kw">end</span>
+  <span class="kw">end</span>
+
+  <span class="kw">def</span> <span class="fn">respond_to_missing?</span>(name, include_private = <span class="kw">false</span>)
+    name.<span class="fn">to_s</span>.<span class="fn">start_with?</span>(<span class="str">"scan_"</span>) || <span class="fn">super</span>
+  <span class="kw">end</span>
+<span class="kw">end</span>
+
+<span class="var">s</span> = <span class="cls">FlexibleScanner</span>.<span class="fn">new</span>
+<span class="var">s</span>.<span class="fn">scan_tcp</span>
+<span class="var">s</span>.<span class="fn">scan_udp</span>
+<span class="var">s</span>.<span class="fn">scan_http</span></code>
+        </div>
+
+        <h3>Regular Expressions</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="var">text</span> = <span class="str">"Contact: admin@target.com or support@target.com"</span>
+
+<span class="cmt"># Extract emails</span>
+<span class="var">emails</span> = <span class="var">text</span>.<span class="fn">scan</span>(<span class="str">/[\w\.-]+@[\w\.-]+\.\w+/</span>)
+<span class="fn">puts</span> <span class="var">emails</span>.<span class="fn">inspect</span>
+
+<span class="cmt"># Match IP addresses</span>
+<span class="var">log</span> = <span class="str">"Failed login from 192.168.1.45 and 10.0.0.7"</span>
+<span class="var">ips</span> = <span class="var">log</span>.<span class="fn">scan</span>(<span class="str">/\b(?:\d{1,3}\.){3}\d{1,3}\b/</span>)
+<span class="fn">puts</span> <span class="var">ips</span>.<span class="fn">inspect</span>
+
+<span class="cmt"># Substitution</span>
+<span class="var">clean</span> = <span class="var">text</span>.<span class="fn">gsub</span>(<span class="str">/@target\.com/</span>, <span class="str">"@hacked.io"</span>)
+<span class="fn">puts</span> <span class="var">clean</span></code>
+        </div>
+
+        <h3>Error Handling</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="kw">begin</span>
+  <span class="cmt"># risky code</span>
+  result = <span class="num">10</span> / <span class="num">0</span>
+<span class="kw">rescue</span> <span class="cls">ZeroDivisionError</span> =&gt; e
+  <span class="fn">puts</span> <span class="str">"Error: <span class="var">#{e.message}</span>"</span>
+<span class="kw">rescue</span> <span class="cls">StandardError</span> =&gt; e
+  <span class="fn">puts</span> <span class="str">"General error: <span class="var">#{e.message}</span>"</span>
+<span class="kw">ensure</span>
+  <span class="fn">puts</span> <span class="str">"This always runs"</span>
+<span class="kw">end</span>
+
+<span class="cmt"># Custom exceptions</span>
+<span class="kw">class</span> <span class="cls">ScanError</span> &lt; <span class="cls">StandardError</span>; <span class="kw">end</span>
+
+<span class="kw">begin</span>
+  <span class="kw">raise</span> <span class="cls">ScanError</span>, <span class="str">"Target unreachable"</span>
+<span class="kw">rescue</span> <span class="cls">ScanError</span> =&gt; e
+  <span class="fn">puts</span> e.<span class="fn">message</span>
+<span class="kw">end</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 14 BEST ===== -->
+    <section class="section" id="best">
+        <span class="section-number">14 · BEST PRACTICES</span>
+        <h2 class="section-title">
+            <span class="icon">✅</span>
+            Ruby Best Practices
+        </h2>
+        <ol>
+            <li><strong>Follow the Ruby Style Guide</strong> — 2-space indentation, snake_case for methods/variables.</li>
+            <li><strong>Use <code>bundler</code></strong> — Manage gem dependencies with a <code>Gemfile</code>.</li>
+            <li><strong>Prefer <code>each</code> over <code>for</code></strong> — Ruby's iterators are idiomatic.</li>
+            <li><strong>Use symbols for hash keys</strong> — Faster and cleaner than strings.</li>
+            <li><strong>Favor blocks over loops</strong> — <code>map</code>, <code>select</code>, <code>reduce</code> are more expressive.</li>
+            <li><strong>Use <code>attr_accessor</code></strong> — Instead of manual getters/setters.</li>
+            <li><strong>Handle exceptions</strong> — Wrap risky operations in <code>begin/rescue</code>.</li>
+            <li><strong>Write tests</strong> — RSpec or Minitest keeps your code reliable.</li>
+            <li><strong>Use <code>freeze</code> for constants</strong> — <code>CONST = "value".freeze</code>.</li>
+            <li><strong>Comment intelligently</strong> — Explain "why", not "what".</li>
+        </ol>
+
+        <h3>Gemfile Example</h3>
+        <div class="code-block" data-lang="ruby">
+<code><span class="cmt"># Gemfile</span>
+source <span class="str">'https://rubygems.org'</span>
+
+gem <span class="str">'httparty'</span>
+gem <span class="str">'nokogiri'</span>
+gem <span class="str">'net-ssh'</span>
+gem <span class="str">'colorize'</span></code>
+        </div>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Install dependencies</span>
+bundle install
+
+<span class="cmt"># Run with bundler</span>
+bundle exec ruby script.rb</code>
+        </div>
+    </section>
+
+    <!-- ===== 15 LEGAL ===== -->
+    <section class="section" id="legal">
+        <span class="section-number">15 · LEGAL &amp; ETHICS</span>
+        <h2 class="section-title">
+            <span class="icon">⚖️</span>
+            Legal &amp; Ethical Boundaries
+        </h2>
+        <div class="callout warn">
+            <strong>⚠️ Critical Warning:</strong> Writing a hacking script is legal. <strong>Using it against systems you don't own or have permission to test is a crime.</strong> Unauthorized access can lead to imprisonment, fines, and a permanent criminal record.
+        </div>
+
+        <h3>Legal Practice Environments</h3>
+        <div class="tool-grid">
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🧪</span> TryHackMe</div>
+                <p>Beginner-friendly, guided labs for learning ethical hacking.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🎯</span> Hack The Box</div>
+                <p>Realistic vulnerable machines. Excellent for intermediate learners.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">💀</span> VulnHub</div>
+                <p>Downloadable vulnerable VMs. Run them locally in VirtualBox.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🐐</span> OWASP Juice Shop</div>
+                <p>Modern vulnerable web app. Practice web exploitation legally.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🕸️</span> DVWA</div>
+                <p>Damn Vulnerable Web App. Classic for learning web attacks.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">☁️</span> Cloud Labs</div>
+                <p>Spin up your own VMs on AWS, Azure, or GCP.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 16 CONCLUSION ===== -->
+    <section class="section" id="conclusion">
+        <span class="section-number">16 · CONCLUSION</span>
+        <h2 class="section-title">
+            <span class="icon">🎓</span>
+            Final Thoughts
+        </h2>
+        <p>
+            Ruby is one of the most <strong>elegant and enjoyable</strong> programming languages ever created. Its philosophy of <em>programmer happiness</em> shines through in every line of code. And in the security world, Ruby's importance is cemented by its role as the language of <strong>Metasploit</strong> — the framework that virtually every penetration tester uses.
+        </p>
+        <p>
+            Whether you want to write custom Metasploit modules, build security tools, or simply enjoy writing beautiful code, Ruby is a fantastic choice. It's beginner-friendly, yet powerful enough for advanced metaprogramming.
+        </p>
+        <p>
+            The journey follows a clear path:
+        </p>
+        <ol>
+            <li><strong>Learn the basics</strong> — syntax, variables, control flow, methods.</li>
+            <li><strong>Master OOP</strong> — classes, modules, inheritance, mixins.</li>
+            <li><strong>Explore the gems</strong> — httparty, nokogiri, net-ssh.</li>
+            <li><strong>Study Metasploit</strong> — read its source code on GitHub.</li>
+            <li><strong>Write your own modules</strong> — start simple, then advance.</li>
+            <li><strong>Practice daily</strong> — try new things, build small tools.</li>
+        </ol>
+        <div class="callout">
+            <strong>🚀 Next Steps:</strong> Install Ruby, write a simple port scanner, then dive into the Metasploit source. Within weeks, you'll be writing modules like a pro.
+        </div>
+        <p style="text-align:center; margin-top: 30px; font-size: 17px; color: #00ff88; font-weight: 600;">
+            Happy hacking — ethically. 💎
+        </p>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="page-footer">
+        <p>© 2025 · <span class="brand">⚡ cyber·sume</span> · Ruby Programming</p>
+        <p style="margin-top: 8px; font-size: 12px;">Complete Guide · Beginner to Advanced · Updated 2025</p>
+    </footer>
 
 </div>
+
+</body>
+</html>
